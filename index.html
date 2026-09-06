@@ -3,27 +3,494 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONE LIFE — Football • Music • Life</title>
+
+  <title>ONE LIFE — Character Creator</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="title-screen">
-    <section class="game-card">
-      <div class="eyebrow">FOOTBALL • MUSIC • LIFE</div>
-      <h1>ONE LIFE</h1>
-      <p class="tagline">One life. Two careers.</p>
 
-      <nav class="main-menu" aria-label="Menu principal">
-        <button data-action="new-game">NOVO JOGO</button>
-        <button data-action="continue">CONTINUAR</button>
-        <button data-action="settings">DEFINIÇÕES</button>
+<body>
+
+  <!-- =========================
+       ECRÃ INICIAL
+       ========================= -->
+
+  <main id="title-screen" class="screen active">
+
+    <section class="game-card">
+
+      <div class="eyebrow">
+        FOOTBALL • MUSIC • LIFE
+      </div>
+
+      <h1>ONE LIFE</h1>
+
+      <p class="tagline">
+        One life. Two careers.
+      </p>
+
+      <nav class="main-menu">
+
+        <button id="new-game-button">
+          NOVO JOGO
+        </button>
+
+        <button id="continue-button">
+          CONTINUAR
+        </button>
+
+        <button id="settings-button">
+          DEFINIÇÕES
+        </button>
+
       </nav>
 
-      <p class="version">V0.1 — Fundação</p>
+      <p class="version">
+        V0.2 — Character Creator
+      </p>
+
     </section>
+
   </main>
 
-  <div id="message" class="message" hidden></div>
+
+  <!-- =========================
+       CHARACTER CREATOR
+       ========================= -->
+
+  <main id="creator-screen" class="screen">
+
+    <section class="creator-card">
+
+      <div class="creator-header">
+
+        <div>
+          <div class="eyebrow">
+            ONE LIFE
+          </div>
+
+          <h2>CRIAR PERSONAGEM</h2>
+
+          <p>
+            A tua história começa aos 16 anos.
+          </p>
+        </div>
+
+        <div class="age-badge">
+          IDADE<br>
+          <strong>16</strong>
+        </div>
+
+      </div>
+
+
+      <form id="character-form">
+
+
+        <!-- IDENTIDADE -->
+
+        <section class="creator-section">
+
+          <h3>👤 Identidade</h3>
+
+          <div class="form-grid">
+
+            <label>
+              Nome real
+              <input
+                type="text"
+                id="real-name"
+                placeholder="Ex.: João Silva"
+                required
+              >
+            </label>
+
+            <label>
+              Nome artístico
+              <input
+                type="text"
+                id="artist-name"
+                placeholder="Ex.: J-Soul"
+                required
+              >
+            </label>
+
+            <label>
+              Nacionalidade
+              <select id="nationality" required>
+                <option value="">Selecionar país</option>
+                <option>Portugal</option>
+                <option>Espanha</option>
+                <option>Brasil</option>
+                <option>França</option>
+                <option>Inglaterra</option>
+                <option>Alemanha</option>
+                <option>Itália</option>
+                <option>Argentina</option>
+                <option>Estados Unidos</option>
+                <option>Japão</option>
+                <option>Coreia do Sul</option>
+                <option>Marrocos</option>
+                <option>Angola</option>
+                <option>Moçambique</option>
+                <option>Outro país</option>
+              </select>
+            </label>
+
+            <label>
+              Número da camisola
+              <input
+                type="number"
+                id="shirt-number"
+                min="1"
+                max="99"
+                value="10"
+                required
+              >
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- FUTEBOL -->
+
+        <section class="creator-section">
+
+          <h3>⚽ Futebol</h3>
+
+          <div class="form-grid">
+
+            <label>
+              Posição principal
+              <select id="primary-position" required>
+                <option value="">Selecionar</option>
+                <option>GR — Guarda-Redes</option>
+                <option>DC — Defesa Central</option>
+                <option>DD — Defesa Direito</option>
+                <option>DE — Defesa Esquerdo</option>
+                <option>MDC — Médio Defensivo</option>
+                <option>MC — Médio Centro</option>
+                <option>MO — Médio Ofensivo</option>
+                <option>AD — Extremo Direito</option>
+                <option>AE — Extremo Esquerdo</option>
+                <option>PL — Ponta de Lança</option>
+              </select>
+            </label>
+
+            <label>
+              Posição secundária
+              <select id="secondary-position" required>
+                <option value="">Selecionar</option>
+                <option>GR — Guarda-Redes</option>
+                <option>DC — Defesa Central</option>
+                <option>DD — Defesa Direito</option>
+                <option>DE — Defesa Esquerdo</option>
+                <option>MDC — Médio Defensivo</option>
+                <option>MC — Médio Centro</option>
+                <option>MO — Médio Ofensivo</option>
+                <option>AD — Extremo Direito</option>
+                <option>AE — Extremo Esquerdo</option>
+                <option>PL — Ponta de Lança</option>
+              </select>
+            </label>
+
+            <label>
+              Pé preferido
+              <select id="preferred-foot" required>
+                <option value="">Selecionar</option>
+                <option>Direito</option>
+                <option>Esquerdo</option>
+                <option>Ambidestro</option>
+              </select>
+            </label>
+
+            <label>
+              Altura
+              <select id="height" required>
+                <option value="">Selecionar</option>
+                <option>165 cm</option>
+                <option>170 cm</option>
+                <option>175 cm</option>
+                <option>180 cm</option>
+                <option>185 cm</option>
+                <option>190 cm</option>
+                <option>195 cm</option>
+                <option>200 cm</option>
+              </select>
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- MÚSICA -->
+
+        <section class="creator-section">
+
+          <h3>🎵 Música</h3>
+
+          <div class="form-grid">
+
+            <label>
+              Género principal
+              <select id="music-primary" required>
+                <option value="">Selecionar</option>
+                <option>Hip-Hop</option>
+                <option>Rap</option>
+                <option>Trap</option>
+                <option>Pop</option>
+                <option>R&B</option>
+                <option>Rock</option>
+                <option>Afrobeats</option>
+                <option>Reggaeton</option>
+                <option>Eletrónica</option>
+                <option>Outro</option>
+              </select>
+            </label>
+
+            <label>
+              Género secundário
+              <select id="music-secondary" required>
+                <option value="">Selecionar</option>
+                <option>Hip-Hop</option>
+                <option>Rap</option>
+                <option>Trap</option>
+                <option>Pop</option>
+                <option>R&B</option>
+                <option>Rock</option>
+                <option>Afrobeats</option>
+                <option>Reggaeton</option>
+                <option>Eletrónica</option>
+                <option>Outro</option>
+              </select>
+            </label>
+
+            <label>
+              Terceiro género
+              <select id="music-tertiary" required>
+                <option value="">Selecionar</option>
+                <option>Hip-Hop</option>
+                <option>Rap</option>
+                <option>Trap</option>
+                <option>Pop</option>
+                <option>R&B</option>
+                <option>Rock</option>
+                <option>Afrobeats</option>
+                <option>Reggaeton</option>
+                <option>Eletrónica</option>
+                <option>Outro</option>
+              </select>
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- APARÊNCIA -->
+
+        <section class="creator-section">
+
+          <h3>🎨 Aparência</h3>
+
+          <div class="form-grid">
+
+            <label>
+              Tom de pele
+              <select id="skin-tone" required>
+                <option value="">Selecionar</option>
+                <option>Claro</option>
+                <option>Médio claro</option>
+                <option>Médio</option>
+                <option>Médio escuro</option>
+                <option>Escuro</option>
+              </select>
+            </label>
+
+            <label>
+              Cor dos olhos
+              <select id="eye-color" required>
+                <option value="">Selecionar</option>
+                <option>Castanhos</option>
+                <option>Azuis</option>
+                <option>Verdes</option>
+                <option>Cinzentos</option>
+                <option>Âmbar</option>
+              </select>
+            </label>
+
+            <label>
+              Formato dos olhos
+              <select id="eye-shape">
+                <option>Normal</option>
+                <option>Amendoado</option>
+                <option>Redondo</option>
+                <option>Estreito</option>
+              </select>
+            </label>
+
+            <label>
+              Formato do rosto
+              <select id="face-shape">
+                <option>Oval</option>
+                <option>Redondo</option>
+                <option>Quadrado</option>
+                <option>Alongado</option>
+                <option>Coração</option>
+              </select>
+            </label>
+
+            <label>
+              Nariz
+              <select id="nose">
+                <option>Normal</option>
+                <option>Pequeno</option>
+                <option>Médio</option>
+                <option>Grande</option>
+              </select>
+            </label>
+
+            <label>
+              Boca
+              <select id="mouth">
+                <option>Normal</option>
+                <option>Pequena</option>
+                <option>Média</option>
+                <option>Grande</option>
+              </select>
+            </label>
+
+            <label>
+              Sobrancelhas
+              <select id="eyebrows">
+                <option>Normais</option>
+                <option>Finas</option>
+                <option>Grossas</option>
+                <option>Direitas</option>
+                <option>Arqueadas</option>
+              </select>
+            </label>
+
+            <label>
+              Tipo de cabelo
+              <select id="hair-type" required>
+                <option value="">Selecionar</option>
+                <option>Curto</option>
+                <option>Médio</option>
+                <option>Longo</option>
+                <option>Caracóis</option>
+                <option>Ondulado</option>
+                <option>Afro</option>
+                <option>Tranças</option>
+                <option>Twists</option>
+                <option>Dreadlocks</option>
+                <option>Fade</option>
+              </select>
+            </label>
+
+            <label>
+              Cor do cabelo
+              <select id="hair-color" required>
+                <option value="">Selecionar</option>
+                <option>Preto</option>
+                <option>Castanho</option>
+                <option>Loiro</option>
+                <option>Ruivo</option>
+                <option>Branco</option>
+                <option>Outra</option>
+              </select>
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- ESTILO -->
+
+        <section class="creator-section">
+
+          <h3>👕 Estilo inicial</h3>
+
+          <div class="form-grid">
+
+            <label>
+              Parte de cima
+              <select id="top-style">
+                <option>T-shirt</option>
+                <option>Camisola</option>
+                <option>Casaco</option>
+                <option>Hoodie</option>
+              </select>
+            </label>
+
+            <label>
+              Parte de baixo
+              <select id="bottom-style">
+                <option>Calças</option>
+                <option>Calções</option>
+                <option>Jeans</option>
+              </select>
+            </label>
+
+            <label>
+              Calçado
+              <select id="shoes">
+                <option>Sapatilhas</option>
+                <option>Botas</option>
+                <option>Outro</option>
+              </select>
+            </label>
+
+            <label>
+              Acessório
+              <select id="accessory">
+                <option>Nenhum</option>
+                <option>Boné</option>
+                <option>Óculos</option>
+                <option>Colar</option>
+                <option>Pulseira</option>
+              </select>
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- CONFIRMAÇÃO -->
+
+        <section class="creator-finish">
+
+          <p>
+            <strong>A tua vida começa aos 16.</strong>
+          </p>
+
+          <p>
+            Academia. Música. Sonhos. Escolhas.
+          </p>
+
+          <button type="submit" class="create-button">
+            CRIAR PERSONAGEM
+          </button>
+
+        </section>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
   <script src="app.js"></script>
+
 </body>
 </html>

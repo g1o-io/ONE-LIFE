@@ -1,108 +1,234 @@
+/* ================================
+   ONE LIFE — V0.2
+   Character Creator
+================================ */
+
 * {
   box-sizing: border-box;
-}
-
-:root {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #f7f7fb;
-  background: #090b10;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 50% 35%, rgba(80, 100, 160, 0.18), transparent 38%),
-    linear-gradient(145deg, #090b10 0%, #111722 55%, #090b10 100%);
+    radial-gradient(circle at top left, #243b6b, transparent 35%),
+    radial-gradient(circle at bottom right, #4b1d5c, transparent 35%),
+    #080b14;
+  color: #ffffff;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+/* ================================
+   APP
+================================ */
+
+#app {
+  min-height: 100vh;
+}
+
+/* ================================
+   TITLE SCREEN
+================================ */
+
+.screen {
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .title-screen {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-}
-
-.game-card {
-  width: min(560px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 56px 34px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  background: rgba(15, 18, 27, 0.78);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
-  backdrop-filter: blur(14px);
 }
 
-.eyebrow {
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
-  opacity: 0.65;
-  margin-bottom: 16px;
+.title-content {
+  width: min(700px, 100%);
 }
 
-h1 {
-  margin: 0;
-  font-size: clamp(3.8rem, 15vw, 7rem);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
+.game-title {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
 }
 
-.tagline {
-  margin: 18px 0 42px;
-  font-size: 1rem;
-  opacity: 0.72;
+.game-subtitle {
+  font-size: 1.2rem;
+  color: #b9c2d9;
+  margin-bottom: 45px;
+  letter-spacing: 2px;
 }
 
-.main-menu {
-  display: grid;
-  gap: 12px;
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(360px, 100%);
+  margin: 0 auto;
 }
 
-.main-menu button {
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+.menu-button {
+  border: none;
   border-radius: 14px;
-  padding: 16px 20px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.06);
-  font: inherit;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  padding: 17px 20px;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  background: #ffffff;
+  color: #090c15;
+  font-weight: 800;
+  transition: 0.2s ease;
 }
 
-.main-menu button:hover,
-.main-menu button:focus-visible {
+.menu-button:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.11);
-  border-color: rgba(255, 255, 255, 0.28);
+  filter: brightness(1.08);
+}
+
+.menu-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ================================
+   CHARACTER CREATOR
+================================ */
+
+.creator-screen {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.creator-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.creator-header h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin-bottom: 8px;
+}
+
+.creator-header p {
+  color: #aeb8d0;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.creator-form {
+  display: grid;
+  gap: 22px;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.form-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #b9c2d9;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #111727;
+  color: #ffffff;
   outline: none;
 }
 
-.version {
-  margin: 28px 0 0;
-  font-size: 0.75rem;
-  opacity: 0.4;
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ffffff;
 }
 
-.message {
-  position: fixed;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  width: min(520px, calc(100% - 32px));
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: #171c28;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+/* ================================
+   FINISH BUTTON
+================================ */
+
+.finish-area {
   text-align: center;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  padding: 10px 0 40px;
 }
 
-@media (max-width: 480px) {
-  .game-card {
-    padding: 42px 22px;
+.create-character-button {
+  width: min(500px, 100%);
+  padding: 18px 24px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #080b14;
+  font-size: 1.05rem;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.create-character-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(255, 255, 255, 0.15);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+  .screen {
+    padding: 25px 14px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .form-section {
+    padding: 18px;
+  }
+
+  .game-title {
+    letter-spacing: 4px;
   }
 }

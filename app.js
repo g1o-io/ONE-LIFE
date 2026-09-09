@@ -264,11 +264,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    state.week += 1;
-state.energy = Math.max(0, state.energy - 10);
+    alert("Energia antes: " + state.energy);
 
-saveGame(state);
-populateHub(state);
+    state.week += 1;
+    state.energy = Math.max(0, state.energy - 10);
+
+    alert("Energia depois: " + state.energy);
+
+    saveGame(state);
+    populateHub(state);
 }
 
     // =========================

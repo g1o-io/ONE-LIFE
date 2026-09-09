@@ -265,9 +265,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     state.week += 1;
+state.energy = Math.max(0, state.energy - 10);
 
-    saveGame(state);
-    populateHub(state);
+saveGame(state);
+populateHub(state);
 }
 
     // =========================

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ONE LIFE — Character Creator</title>
+  <title>ONE LIFE — Football • Music • Life</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -31,22 +31,22 @@
 
       <nav class="main-menu">
 
-        <button id="new-game-button">
+        <button id="new-game-button" type="button">
           NOVO JOGO
         </button>
 
-        <button id="continue-button">
+        <button id="continue-button" type="button">
           CONTINUAR
         </button>
 
-        <button id="settings-button">
+        <button id="settings-button" type="button">
           DEFINIÇÕES
         </button>
 
       </nav>
 
       <p class="version">
-        V0.2 — Character Creator
+        V0.3 — HUB PRINCIPAL
       </p>
 
     </section>
@@ -65,6 +65,7 @@
       <div class="creator-header">
 
         <div>
+
           <div class="eyebrow">
             ONE LIFE
           </div>
@@ -74,6 +75,7 @@
           <p>
             A tua história começa aos 16 anos.
           </p>
+
         </div>
 
         <div class="age-badge">
@@ -86,8 +88,9 @@
 
       <form id="character-form">
 
-
-        <!-- IDENTIDADE -->
+        <!-- =========================
+             IDENTIDADE
+             ========================= -->
 
         <section class="creator-section">
 
@@ -117,8 +120,13 @@
 
             <label>
               Nacionalidade
+
               <select id="nationality" required>
-                <option value="">Selecionar país</option>
+
+                <option value="">
+                  Selecionar país
+                </option>
+
                 <option>Portugal</option>
                 <option>Espanha</option>
                 <option>Brasil</option>
@@ -134,11 +142,14 @@
                 <option>Angola</option>
                 <option>Moçambique</option>
                 <option>Outro país</option>
+
               </select>
+
             </label>
 
             <label>
               Número da camisola
+
               <input
                 type="number"
                 id="shirt-number"
@@ -147,6 +158,7 @@
                 value="10"
                 required
               >
+
             </label>
 
           </div>
@@ -154,7 +166,9 @@
         </section>
 
 
-        <!-- FUTEBOL -->
+        <!-- =========================
+             FUTEBOL
+             ========================= -->
 
         <section class="creator-section">
 
@@ -164,8 +178,13 @@
 
             <label>
               Posição principal
+
               <select id="primary-position" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>GR — Guarda-Redes</option>
                 <option>DC — Defesa Central</option>
                 <option>DD — Defesa Direito</option>
@@ -176,13 +195,21 @@
                 <option>AD — Extremo Direito</option>
                 <option>AE — Extremo Esquerdo</option>
                 <option>PL — Ponta de Lança</option>
+
               </select>
+
             </label>
+
 
             <label>
               Posição secundária
+
               <select id="secondary-position" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>GR — Guarda-Redes</option>
                 <option>DC — Defesa Central</option>
                 <option>DD — Defesa Direito</option>
@@ -193,23 +220,39 @@
                 <option>AD — Extremo Direito</option>
                 <option>AE — Extremo Esquerdo</option>
                 <option>PL — Ponta de Lança</option>
+
               </select>
+
             </label>
+
 
             <label>
               Pé preferido
+
               <select id="preferred-foot" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Direito</option>
                 <option>Esquerdo</option>
                 <option>Ambidestro</option>
+
               </select>
+
             </label>
+
 
             <label>
               Altura
+
               <select id="height" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>165 cm</option>
                 <option>170 cm</option>
                 <option>175 cm</option>
@@ -218,7 +261,9 @@
                 <option>190 cm</option>
                 <option>195 cm</option>
                 <option>200 cm</option>
+
               </select>
+
             </label>
 
           </div>
@@ -226,7 +271,9 @@
         </section>
 
 
-        <!-- MÚSICA -->
+        <!-- =========================
+             MÚSICA
+             ========================= -->
 
         <section class="creator-section">
 
@@ -236,8 +283,13 @@
 
             <label>
               Género principal
+
               <select id="music-primary" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Hip-Hop</option>
                 <option>Rap</option>
                 <option>Trap</option>
@@ -248,13 +300,21 @@
                 <option>Reggaeton</option>
                 <option>Eletrónica</option>
                 <option>Outro</option>
+
               </select>
+
             </label>
+
 
             <label>
               Género secundário
+
               <select id="music-secondary" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Hip-Hop</option>
                 <option>Rap</option>
                 <option>Trap</option>
@@ -265,13 +325,21 @@
                 <option>Reggaeton</option>
                 <option>Eletrónica</option>
                 <option>Outro</option>
+
               </select>
+
             </label>
+
 
             <label>
               Terceiro género
+
               <select id="music-tertiary" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Hip-Hop</option>
                 <option>Rap</option>
                 <option>Trap</option>
@@ -282,7 +350,9 @@
                 <option>Reggaeton</option>
                 <option>Eletrónica</option>
                 <option>Outro</option>
+
               </select>
+
             </label>
 
           </div>
@@ -290,7 +360,9 @@
         </section>
 
 
-        <!-- APARÊNCIA -->
+        <!-- =========================
+             APARÊNCIA
+             ========================= -->
 
         <section class="creator-section">
 
@@ -300,84 +372,130 @@
 
             <label>
               Tom de pele
+
               <select id="skin-tone" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Claro</option>
                 <option>Médio claro</option>
                 <option>Médio</option>
                 <option>Médio escuro</option>
                 <option>Escuro</option>
+
               </select>
+
             </label>
+
 
             <label>
               Cor dos olhos
+
               <select id="eye-color" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Castanhos</option>
                 <option>Azuis</option>
                 <option>Verdes</option>
                 <option>Cinzentos</option>
                 <option>Âmbar</option>
+
               </select>
+
             </label>
+
 
             <label>
               Formato dos olhos
+
               <select id="eye-shape">
+
                 <option>Normal</option>
                 <option>Amendoado</option>
                 <option>Redondo</option>
                 <option>Estreito</option>
+
               </select>
+
             </label>
+
 
             <label>
               Formato do rosto
+
               <select id="face-shape">
+
                 <option>Oval</option>
                 <option>Redondo</option>
                 <option>Quadrado</option>
                 <option>Alongado</option>
                 <option>Coração</option>
+
               </select>
+
             </label>
+
 
             <label>
               Nariz
+
               <select id="nose">
+
                 <option>Normal</option>
                 <option>Pequeno</option>
                 <option>Médio</option>
                 <option>Grande</option>
+
               </select>
+
             </label>
+
 
             <label>
               Boca
+
               <select id="mouth">
+
                 <option>Normal</option>
                 <option>Pequena</option>
                 <option>Média</option>
                 <option>Grande</option>
+
               </select>
+
             </label>
+
 
             <label>
               Sobrancelhas
+
               <select id="eyebrows">
+
                 <option>Normais</option>
                 <option>Finas</option>
                 <option>Grossas</option>
                 <option>Direitas</option>
                 <option>Arqueadas</option>
+
               </select>
+
             </label>
+
 
             <label>
               Tipo de cabelo
+
               <select id="hair-type" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Curto</option>
                 <option>Médio</option>
                 <option>Longo</option>
@@ -388,20 +506,30 @@
                 <option>Twists</option>
                 <option>Dreadlocks</option>
                 <option>Fade</option>
+
               </select>
+
             </label>
+
 
             <label>
               Cor do cabelo
+
               <select id="hair-color" required>
-                <option value="">Selecionar</option>
+
+                <option value="">
+                  Selecionar
+                </option>
+
                 <option>Preto</option>
                 <option>Castanho</option>
                 <option>Loiro</option>
                 <option>Ruivo</option>
                 <option>Branco</option>
                 <option>Outra</option>
+
               </select>
+
             </label>
 
           </div>
@@ -409,7 +537,9 @@
         </section>
 
 
-        <!-- ESTILO -->
+        <!-- =========================
+             ESTILO
+             ========================= -->
 
         <section class="creator-section">
 
@@ -419,41 +549,60 @@
 
             <label>
               Parte de cima
+
               <select id="top-style">
+
                 <option>T-shirt</option>
                 <option>Camisola</option>
                 <option>Casaco</option>
                 <option>Hoodie</option>
+
               </select>
+
             </label>
+
 
             <label>
               Parte de baixo
+
               <select id="bottom-style">
+
                 <option>Calças</option>
                 <option>Calções</option>
                 <option>Jeans</option>
+
               </select>
+
             </label>
+
 
             <label>
               Calçado
+
               <select id="shoes">
+
                 <option>Sapatilhas</option>
                 <option>Botas</option>
                 <option>Outro</option>
+
               </select>
+
             </label>
+
 
             <label>
               Acessório
+
               <select id="accessory">
+
                 <option>Nenhum</option>
                 <option>Boné</option>
                 <option>Óculos</option>
                 <option>Colar</option>
                 <option>Pulseira</option>
+
               </select>
+
             </label>
 
           </div>
@@ -461,7 +610,9 @@
         </section>
 
 
-        <!-- CONFIRMAÇÃO -->
+        <!-- =========================
+             CONFIRMAÇÃO
+             ========================= -->
 
         <section class="creator-finish">
 
@@ -473,13 +624,763 @@
             Academia. Música. Sonhos. Escolhas.
           </p>
 
-          <button type="submit" class="create-button">
+          <button
+            type="submit"
+            class="create-button"
+          >
             CRIAR PERSONAGEM
           </button>
 
         </section>
 
       </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       HUB PRINCIPAL
+       ========================= -->
+
+  <main id="hub-screen" class="screen">
+
+    <section class="hub-shell">
+
+
+      <!-- =========================
+           CABEÇALHO DO HUB
+           ========================= -->
+
+      <header class="hub-header">
+
+        <div>
+
+          <div class="eyebrow">
+            ONE LIFE
+          </div>
+
+          <h2>
+            BEM-VINDO À TUA VIDA
+          </h2>
+
+          <p id="hub-player-subtitle">
+            16 anos • Academia • Música independente
+          </p>
+
+        </div>
+
+
+        <div class="hub-player-badge">
+
+          <span>
+            IDADE
+          </span>
+
+          <strong id="hub-age">
+            16
+          </strong>
+
+        </div>
+
+      </header>
+
+
+      <!-- =========================
+           NOME DO JOGADOR
+           ========================= -->
+
+      <section class="hub-profile-banner">
+
+        <div>
+
+          <span class="hub-label">
+            JOGADOR
+          </span>
+
+          <h1 id="hub-player-name">
+            A TUA CARREIRA
+          </h1>
+
+          <p id="hub-artist-name">
+            O teu nome artístico aparece aqui
+          </p>
+
+        </div>
+
+
+        <div class="hub-overall">
+
+          <span>
+            OVR
+          </span>
+
+          <strong id="hub-ovr">
+            60
+          </strong>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           ESTATÍSTICAS
+           ========================= -->
+
+      <section class="hub-stats">
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            ⚡
+          </span>
+
+          <div>
+
+            <small>
+              ENERGIA
+            </small>
+
+            <strong id="hub-energy">
+              100
+            </strong>
+
+            <span>
+              / 100
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            ❤️
+          </span>
+
+          <div>
+
+            <small>
+              MORAL
+            </small>
+
+            <strong id="hub-morale">
+              75
+            </strong>
+
+            <span>
+              / 100
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            🎯
+          </span>
+
+          <div>
+
+            <small>
+              CONFIANÇA
+            </small>
+
+            <strong id="hub-confidence">
+              50
+            </strong>
+
+            <span>
+              / 100
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            💰
+          </span>
+
+          <div>
+
+            <small>
+              DINHEIRO
+            </small>
+
+            <strong id="hub-money">
+              €0
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            👥
+          </span>
+
+          <div>
+
+            <small>
+              FÃS
+            </small>
+
+            <strong id="hub-fans">
+              0
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="hub-stat-card">
+
+          <span class="hub-stat-icon">
+            ⭐
+          </span>
+
+          <div>
+
+            <small>
+              RECONHECIMENTO
+            </small>
+
+            <strong id="hub-recognition">
+              Desconhecido
+            </strong>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <!-- =========================
+           SEMANA
+           ========================= -->
+
+      <section class="hub-week-card">
+
+        <div class="hub-section-heading">
+
+          <div>
+
+            <span class="hub-label">
+              CALENDÁRIO
+            </span>
+
+            <h3>
+              ESTA SEMANA
+            </h3>
+
+          </div>
+
+          <span id="hub-week">
+            Semana 1
+          </span>
+
+        </div>
+
+
+        <div class="hub-week-grid">
+
+
+          <div class="hub-event">
+
+            <span class="hub-event-icon">
+              ⚽
+            </span>
+
+            <div>
+
+              <small>
+                FUTEBOL
+              </small>
+
+              <strong id="hub-next-match">
+                Treino da academia
+              </strong>
+
+              <span>
+                Próximo evento
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="hub-event">
+
+            <span class="hub-event-icon">
+              🎵
+            </span>
+
+            <div>
+
+              <small>
+                MÚSICA
+              </small>
+
+              <strong id="hub-music-status">
+                Começar a criar música
+              </strong>
+
+              <span>
+                Projeto atual
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="hub-event">
+
+            <span class="hub-event-icon">
+              🏠
+            </span>
+
+            <div>
+
+              <small>
+                VIDA
+              </small>
+
+              <strong id="hub-life-status">
+                Primeiro dia
+              </strong>
+
+              <span>
+                A tua jornada começa agora
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           MENU PRINCIPAL
+           ========================= -->
+
+      <section class="hub-navigation">
+
+        <div class="hub-section-heading">
+
+          <div>
+
+            <span class="hub-label">
+              MENU
+            </span>
+
+            <h3>
+              A TUA VIDA
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="hub-menu-grid">
+
+
+          <!-- FUTEBOL -->
+
+          <button
+            id="hub-football"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              ⚽
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                FUTEBOL
+              </strong>
+
+              <small>
+                Treinos, jogos, clube e carreira
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- MÚSICA -->
+
+          <button
+            id="hub-music"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              🎵
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                MÚSICA
+              </strong>
+
+              <small>
+                Música, carreira, concertos e fãs
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- CALENDÁRIO -->
+
+          <button
+            id="hub-calendar"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              📅
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                CALENDÁRIO
+              </strong>
+
+              <small>
+                Planeia os teus dias e semanas
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- NOTÍCIAS -->
+
+          <button
+            id="hub-news"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              📰
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                NOTÍCIAS
+              </strong>
+
+              <small>
+                Mundo, futebol, música e tu
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- SOCIAL -->
+
+          <button
+            id="hub-social"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              📱
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                SOCIAL
+              </strong>
+
+              <small>
+                Redes sociais, seguidores e tendências
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- FINANÇAS -->
+
+          <button
+            id="hub-finances"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              💰
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                FINANÇAS
+              </strong>
+
+              <small>
+                Dinheiro, salários, despesas e contratos
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- RELAÇÕES -->
+
+          <button
+            id="hub-relationships"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              🤝
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                RELAÇÕES
+              </strong>
+
+              <small>
+                Família, amigos, equipa e contactos
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- CARREIRA -->
+
+          <button
+            id="hub-career"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              👤
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                PERFIL & CARREIRA
+              </strong>
+
+              <small>
+                Atributos, reputação, potencial e histórico
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+          <!-- DEFINIÇÕES -->
+
+          <button
+            id="hub-settings"
+            class="hub-menu-card"
+            type="button"
+          >
+
+            <span class="hub-menu-icon">
+              ⚙️
+            </span>
+
+            <span class="hub-menu-content">
+
+              <strong>
+                DEFINIÇÕES
+              </strong>
+
+              <small>
+                Jogo, idioma, acessibilidade e dados
+              </small>
+
+            </span>
+
+            <span class="hub-menu-arrow">
+              →
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           NOTIFICAÇÕES
+           ========================= -->
+
+      <section class="hub-notifications">
+
+        <div class="hub-section-heading">
+
+          <div>
+
+            <span class="hub-label">
+              NOTIFICAÇÕES
+            </span>
+
+            <h3>
+              O QUE ESTÁ A ACONTECER
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div id="hub-notification-list">
+
+          <div class="hub-notification">
+
+            <span>
+              🟢
+            </span>
+
+            <div>
+
+              <strong>
+                A tua carreira está pronta para começar.
+              </strong>
+
+              <small>
+                Cria a tua personagem e entra no HUB.
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="hub-notification">
+
+            <span>
+              🎵
+            </span>
+
+            <div>
+
+              <strong>
+                A tua carreira musical começa do zero.
+              </strong>
+
+              <small>
+                O primeiro passo será criar a tua identidade artística.
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           RODAPÉ DO HUB
+           ========================= -->
+
+      <footer class="hub-footer">
+
+        <span>
+          ONE LIFE
+        </span>
+
+        <span>
+          Football • Music • Life
+        </span>
+
+        <span>
+          V0.3
+        </span>
+
+      </footer>
+
 
     </section>
 

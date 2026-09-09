@@ -253,6 +253,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================
+    // AVANÇAR SEMANA
+    // =========================
+
+   function advanceWeek() {
+    alert("O botão está a funcionar!");
+
+    const state = loadGame();
+
+    if (!state) {
+        alert("Não existe nenhuma carreira guardada.");
+        return;
+    }
+
+    state.week += 1;
+
+    saveGame(state);
+    populateHub(state);
+}
+
+    // =========================
     // NOVO JOGO
     // =========================
 
@@ -358,6 +378,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+
+    // =========================
+    // BOTÃO AVANÇAR SEMANA
+    // =========================
+
+    const advanceWeekButton = document.getElementById("advance-week-button");
+
+    if (advanceWeekButton) {
+        advanceWeekButton.addEventListener("click", advanceWeek);
+    }
+
+    // =========================
+    // DEFINIÇÕES DO HUB
+    // =========================
 
     const hubSettingsButton = document.getElementById("hub-settings");
 

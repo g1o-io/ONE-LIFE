@@ -257,8 +257,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================
 
    function advanceWeek() {
-    alert("O botão está a funcionar!");
-
     const state = loadGame();
 
     if (!state) {

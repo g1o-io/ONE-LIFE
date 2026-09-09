@@ -383,11 +383,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // BOTÃO AVANÇAR SEMANA
     // =========================
 
-    const advanceWeekButton = document.getElementById("advance-week-button");
+   document.addEventListener("click", (event) => {
+    const button = event.target.closest("#advance-week-button");
 
-    if (advanceWeekButton) {
-        advanceWeekButton.addEventListener("click", advanceWeek);
+    if (button) {
+        advanceWeek();
     }
+});
 
     // =========================
     // DEFINIÇÕES DO HUB
